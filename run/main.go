@@ -31,7 +31,8 @@ func main() {
 
 		//输出爬虫抓取的HashId结果
 		case hashId := <-outHashIdChan:
-			fmt.Println(hashId)
+			//fmt.Println(hashId)
+			fmt.Println("magnet:?xt=urn:btih:" + hashId)
 
 		case msg := <-master:
 			fmt.Println(msg)
